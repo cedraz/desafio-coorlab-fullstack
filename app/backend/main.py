@@ -68,9 +68,9 @@ def get_travel(travel_request: TravelRequest):
     return {
         "confort": {
             "name": confort['name'],
+            "price_conf": confort['price_confort'],
             "bed": confort['bed'],
             "duration": confort['duration'],
-            "price_conf": confort['price_econ'],
         },
         "economic": {
             "name": confort['name'],
