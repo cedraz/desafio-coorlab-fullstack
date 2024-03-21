@@ -7,6 +7,8 @@ const props = defineProps({
   seatType: String,
 })
 
+let price_in_reais = (props.price / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
 import { PhHandCoins, PhTimer } from "@phosphor-icons/vue";
 
 </script>
@@ -28,7 +30,7 @@ import { PhHandCoins, PhTimer } from "@phosphor-icons/vue";
 
     <div class="col-span-12 sm:col-span-4 rounded-md flex flex-col gap-3 justify-center bg-[#e2e2e2] ps-5 py-4">
       <p class="font-bold text-md">Preço</p>
-      <p>{{ props.price }}</p>
+      <p>{{ price_in_reais }}</p>
     </div>
   </div>
 </template>
